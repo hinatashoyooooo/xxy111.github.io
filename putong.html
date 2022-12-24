@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <!-- <link href="css/main.css" rel="stylesheet"> -->
+  <style type="text/css">
+    .typed-cursor {
+      opacity: 1;
+      font-weight: 100;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      -ms-animation: blink 0.7s infinite;
+      -o-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+    @-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+    }
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-ms-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .typed-fade-out {
+      opacity: 0;
+      animation: 0;
+      transition: opacity .25s;
+    }
+  </style>
+  <style>
+    @font-face {
+      font-family: uc-nexus-iconfont;
+      src: url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'), url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')
+    }
+  </style>
+  <!--#include file="../../tongji.html"-->
+
+  <script>
+    var shouci = true;
+    console.log(shouci);
+
+    function bodyPlayMusic() {
+      if (shouci) {
+        shouci = false;
+        audio.play();
+        console.log(shouci);
+      }
+    };
+  </script>
+
+
+</head>
+<div id="divSnow-1" class="htmleaf-content canvas-1"
+     style="position:absolute; width:100%; height:100%; z-index:-1;  background:#000;  ">
+
+
+  <img style="position:absolute; width:100%; position:absolute;
+bottom:-30px;"
+       src="https://p3.toutiaoimg.com/img/tos-cn-i-qvj2lq49k0/cca5b8e7ad704e39a623e35e0481fa41~tplv-tt-shrink:640:0.image" />
+
+  <div id="typed-strings" style="display: none; text-align:center;margin: 0 auto;display: flex;align-items: center;justify-content:center">
+    <p></p>
+    <p style="color: #ffffff;"><br /><br /><span id="name">洋洋子</span>要记得每天开心，<br />圣诞快乐！<br /> 🔔 🍎 🎄 🎅 🍬</p>
+  </div>
+  <span id="typed" style="white-space:pre;"></span>
+  <div class="type-wrap"
+       style=" padding: 10px 35px 0px 0px; position: absolute; top: 0px;  left: 35px;  z-index: 500; color: #ffffff; font-size: 14px;    ">
+    <div class="type-wrap"
+         style=" padding: 10px 35px 0px 0px; position: absolute; top: 0px;  left: 35px;  z-index: 500; color: #ffffff; font-size: 14px;    ">
+      <!--    </div>-->
+
+      <!--</div>-->
+    </div>
+    <!-- <script type="text/javascript" defer="" async="" src="js/uaest.js"></script> -->
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      console.log(name);
+      var url = document.location.toString(); //获取url地址
+      var urlParmStr = url.slice(url.indexOf('?') + 1); //获取问号后所有的字符串
+      var arr = urlParmStr.split('&'); //通过&符号将字符串分割转成数组
+      var courseId = arr[0].split("=")[1]; //获取数组中第一个参数
+      unit_title = decodeURI(courseId); //转码将解码方式unscape换为decodeURI，将中文参数获取
+      name.innerHTML = unit_title
+      document.addEventListener('DOMContentLoaded', function () {
+
+        Typed.new("#typed", {
+          stringsElement: document.getElementById('typed-strings'),
+          typeSpeed: 110,
+          backDelay: 1000,
+          loop: false,
+          contentType: 'html', // or text
+          // defaults to null for infinite loop
+          loopCount: null,
+          callback: function () {
+            foo();
+          },
+          resetCallback: function () {
+            newTyped();
+          }
+        });
+
+        var resetElement = document.querySelector('.reset');
+        if (resetElement) {
+          resetElement.addEventListener('click', function () {
+            document.getElementById('typed')._typed.reset();
+
+          });
+        }
+
+      });
+
+      function newTyped() {
+      }
+
+      function foo() {
+        console.log("Callback");
+      }
+    </script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script>
+      window.jQuery || document.write('<script src="/js/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script type="text/javascript" src="js/websnowjq.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#divSnow-1").websnowjq();
+      });
+    </script>
+    <audio autoplay="autoplay" loop="loop" preload="auto"
+           src="https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/6905357668872063752.mp3">
+    </audio>
+    </body>
+
+</html>
